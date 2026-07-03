@@ -1,0 +1,24 @@
+name: BixisRewards
+main: com.yeditepemc.bixisrewards.BixisRewardsPlugin
+version: ${project.version}
+api-version: '1.21'
+authors: [iBerkS]
+description: YeditepeMC günlük/haftalık/aylık ödül sistemi.
+
+# BixisCore API'sine (BixisCorePlugin.getAPI()) ihtiyaç duyar; önce o yüklenmeli.
+depend: [BixisCore]
+
+commands:
+  gunlukodul:
+    description: Günlük ödül menüsünü açar
+    usage: /gunlukodul
+    aliases: [günlüködül]
+  rewards:
+    description: Ödül sistemi admin komutları
+    usage: /rewards admin give <oyuncu> <tier>
+    permission: bixisrewards.admin
+
+permissions:
+  bixisrewards.admin:
+    description: BixisRewards admin komutlarını kullanma izni
+    default: op
